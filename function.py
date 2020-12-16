@@ -8,15 +8,20 @@ kernel = np.ones((5, 5), np.uint8)
 
 
 def dilated_picture():
-    dilation = cv2.dilate(chien, kernel, iterations=1)
-    cv2.imshow('Dilated dog', dilation)
-    # cv2.waitKey(0)
+    dilated_dog = cv2.dilate(chien, kernel, iterations=1)
+    cv2.imwrite('dilated_dog.png', dilated_dog)
+    cv2.imshow('Dilated dog', dilated_dog)
+    print("Your image is now dilated and you add it in a file")
 
-    dilation = cv2.dilate(cheshire, kernel, iterations=1)
-    cv2.imshow('Dilated cheshire', dilation)
-    # cv2.waitKey(0)
+    dilated_cheshire = cv2.dilate(cheshire, kernel, iterations=1)
+    cv2.imwrite('dilated_cheshire.png', dilated_cheshire)
+    cv2.imshow('Dilated cheshire', dilated_cheshire)
+    print("Your image is now dilated and you add it in a file")
 
-    dilation = cv2.dilate(grumpy_cat, kernel, iterations=1)
-    cv2.imshow('Dilated grumpy cat', dilation)
+    dilated_grumpy_cat = cv2.dilate(grumpy_cat, kernel, iterations=1)
+    cv2.imwrite('dilated_grumpy_cat.png', dilated_grumpy_cat)
+    cv2.imshow('Dilated grumpy cat', dilated_grumpy_cat)
+    print("Your image is now dilated and you add it in a file")
+
     cv2.waitKey(0)
     cv2.destroyAllWindows()
