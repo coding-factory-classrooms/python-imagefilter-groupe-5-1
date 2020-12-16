@@ -1,16 +1,29 @@
-# This is a sample Python script.
+import cv2
 
-# Press Maj+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+image_cheshire = cv2.imread('Cheshire.png')
+image_shiba = cv2.imread('chien.jpg')
+image_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
+
+gray_cheshire = cv2.cvtColor(image_cheshire, cv2.COLOR_BGR2GRAY)
+gray_shiba = cv2.cvtColor(image_shiba, cv2.COLOR_BGR2GRAY)
+gray_grumpy_cat = cv2.cvtColor(image_grumpy_cat, cv2.COLOR_BGR2GRAY)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+image_cheshire = cv2.imread('Cheshire.png')
+image_gray_cheshire = cv2.cvtColor(image_cheshire, cv2.COLOR_BGR2GRAY)
+cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/Cheshire_gray.png', image_gray_cheshire)
+
+image_shiba = cv2.imread('chien.jpg')
+image_gray_shiba = cv2.cvtColor(image_shiba, cv2.COLOR_BGR2GRAY)
+cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/shiba_gray.png', image_gray_shiba)
+
+image_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
+image_gray_grumpy_cat = cv2.cvtColor(image_grumpy_cat, cv2.COLOR_BGR2GRAY)
+cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/gray_grumpy_cat.jpg', image_gray_grumpy_cat)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+cv2.waitKey(0)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
