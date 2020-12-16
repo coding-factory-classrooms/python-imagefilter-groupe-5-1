@@ -1,13 +1,13 @@
 import cv2
 import numpy as np
 
-cheshire = cv2.imread('Cheshire.png', 0)
-grumpy_cat = cv2.imread('grumpy_cat_project.jpg', 0)
-chien = cv2.imread('chien.jpg', 0)
-kernel = np.ones((5, 5), np.uint8)
-
 
 def dilated_picture():
+    cheshire = cv2.imread('Cheshire.png', 0)
+    grumpy_cat = cv2.imread('grumpy_cat_project.jpg', 0)
+    chien = cv2.imread('chien.jpg', 0)
+    kernel = np.ones((5, 5), np.uint8)
+    
     dilated_dog = cv2.dilate(chien, kernel, iterations=1)
     cv2.imwrite('dilated_dog.png', dilated_dog)
     cv2.imshow('Dilated dog', dilated_dog)
