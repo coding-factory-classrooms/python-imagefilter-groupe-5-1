@@ -1,6 +1,7 @@
 import os.path
 import cv2
 import numpy as np
+import function_dilated
 
 kernel = np.ones((5, 5), np.uint8)
 
@@ -13,11 +14,7 @@ if os.path.isfile('Cheshire.png'):
     cv2.imwrite('Cheshire_gray.png', image_gray_cheshire)
     print("Your image is now in black and white and you add it in a filesystem")
     # DILATED
-    image_cheshire = cv2.imread('Cheshire.png')
-    dilated_cheshire = cv2.dilate(image_cheshire, kernel, iterations=1)
-    cv2.imwrite('dilated_cheshire.png', dilated_cheshire)
-    print("Your image is now dilated and you add it in a file\n")
-    cv2.waitKey(0)
+    function_dilated.function_dilated()
 else:
     print("File doesn't exist")
 
@@ -31,9 +28,7 @@ if os.path.isfile('chien.jpg'):
     print("Your image is now in black and white and you add it in a filesystem")
     cv2.waitKey(0)
     # DILATED
-    dilated_dog = cv2.dilate(image_shiba, kernel, iterations=1)
-    cv2.imwrite('dilated_dog.png', dilated_dog)
-    print("Your image is now dilated and you add it in a file\n")
+    function_dilated.function_dilated()
 else:
     print("File doesn't exist")
 
@@ -47,9 +42,7 @@ if os.path.isfile('grumpy_cat_project.jpg'):
     print("Your image is now in black and white and you add it in a filesystem")
     cv2.waitKey(0)
     # DILATED
-    dilated_grumpy_cat = cv2.dilate(image_grumpy_cat, kernel, iterations=1)
-    cv2.imwrite('dilated_grumpy_cat.png', dilated_grumpy_cat)
-    print("Your image is now dilated and you add it in a file\n")
+    function_dilated.function_dilated()
 else:
     print("File doesn't exist")
 
