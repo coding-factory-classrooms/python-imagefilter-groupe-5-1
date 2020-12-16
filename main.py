@@ -1,4 +1,8 @@
 import cv2
+import function
+
+
+function.dilated_picture()
 
 image_cheshire = cv2.imread('Cheshire.png')
 image_shiba = cv2.imread('chien.jpg')
