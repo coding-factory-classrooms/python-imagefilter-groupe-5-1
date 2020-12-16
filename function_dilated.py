@@ -1,22 +1,54 @@
-
+import os.path
 import cv2
 import numpy as np
+
+kernel = np.ones((5, 5), np.uint8)
 
 
 def function_dilated():
 
-    kernel = np.ones((5, 5), np.uint8)
 
-    image_cheshire = cv2.imread('Cheshire.png')
-    dilated_cheshire = cv2.dilate(image_cheshire, kernel, iterations=1)
-    cv2.imwrite('dilated_cheshire.png', dilated_cheshire)
 
-    image_shiba = cv2.imread('chien.jpg')
-    dilated_dog = cv2.dilate(image_shiba, kernel, iterations=1)
-    cv2.imwrite('dilated_dog.png', dilated_dog)
+    print("----------FOR CHESHIRE----------")
+    if os.path.isfile('Cheshire.png'):
+        print("File exist")
+        # DILATED
+        image_cheshire = cv2.imread('Cheshire.png')
+        dilated_cheshire = cv2.dilate(image_cheshire, kernel, iterations=1)
+        cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_cheshire.png',
+                    dilated_cheshire)
+        print("Your image is now dilated and you add it in a file\n")
+        cv2.waitKey(0)
+    else:
+        print("File doesn't exist")
 
-    image_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
-    dilated_grumpy_cat = cv2.dilate(image_grumpy_cat, kernel, iterations=1)
-    cv2.imwrite('dilated_grumpy_cat.png', dilated_grumpy_cat)
 
-    print("Your image is now in dilated and you add it in a filesystem\n")
+
+
+    print("----------FOR SHIBA----------")
+    if os.path.isfile('chien.jpg'):
+        print("File exist")
+        # BLACK AND WHITE
+        image_shiba = cv2.imread('chien.jpg')
+        # DILATED
+        dilated_dog = cv2.dilate(image_shiba, kernel, iterations=1)
+        cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_dog.png',
+                    dilated_dog)
+        print("Your image is now dilated and you add it in a file\n")
+    else:
+        print("File doesn't exist")
+
+
+
+    print("----------FOR GRUMPY CAT----------")
+    if os.path.isfile('grumpy_cat_project.jpg'):
+        print("File exist")
+        image_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
+        # DILATED
+        dilated_grumpy_cat = cv2.dilate(image_grumpy_cat, kernel, iterations=1)
+        cv2.imwrite(
+            'C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_grumpy_cat.png',
+            dilated_grumpy_cat)
+        print("Your image is now dilated and you add it in a file\n")
+    else:
+        print("File doesn't exist")
