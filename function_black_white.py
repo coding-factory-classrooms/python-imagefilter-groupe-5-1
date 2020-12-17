@@ -4,8 +4,12 @@ import cv2
 
 
 def function_black_and_white():
-
-
+    """
+    She applied a filter which gives the image gray.
+    She take the image and look if she exists. She became a value and put the gray filter.
+    Then She is rewrite in a new file with a new name.
+    She do that for the 3 images.
+    """
 
     print("----------FOR CHESHIRE----------")
     if os.path.isfile('Cheshire.png'):
