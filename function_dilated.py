@@ -2,7 +2,9 @@ import os.path
 import cv2
 import numpy as np
 
+
 kernel = np.ones((5, 5), np.uint8)
+
 
 
 def function_dilated():
@@ -46,6 +48,6 @@ def function_dilated():
         dilated_grumpy_cat = cv2.dilate(image_grumpy_cat, kernel, iterations=1)
         cv2.imwrite(
             'filesystem_gray_picture/dilated_grumpy_cat.png',dilated_grumpy_cat)
-        print("Your image is now dilated and you add it in a file\n")
+        print("Your image is now dilated and you add it in a file\n\n\n\n")
     else:
         print("File doesn't exist")
