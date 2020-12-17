@@ -1,6 +1,6 @@
 import os
 import cv2
-from filters import grayscale, blur
+import Logger_filters
 
 input_dir = 'data/imgs'
 files = os.listdir(input_dir)
@@ -21,3 +21,5 @@ for f in files:
 
     # 3. Enregistrer l'image filtrée dans le dossier de sortie
     cv2.imwrite(f"data/output/{f}", image)
+
+Logger_filters.dump_log()
