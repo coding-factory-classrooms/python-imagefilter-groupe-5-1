@@ -10,10 +10,10 @@ def blurry():
     if os.path.isfile('Cheshire.png'):
         print("File exist")
         # BLURRY CHESHIRE
-        blurry_grumpy_cat = cv2.imread('Cheshire.png')
+        image_blurry_cheshire = cv2.imread('Cheshire.png')
         src = cv2.imread('Cheshire.png', cv2.IMREAD_UNCHANGED)
-        blurry_grumpy_cat = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
-        cv2.imwrite('filesystem_gray_picture/blurry_cheshire.png',blurry_grumpy_cat)
+        image_blurry_cheshire = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
+        cv2.imwrite('filesystem_gray_picture/blurry_cheshire.png',image_blurry_cheshire)
         print("Your image is now in blurry and you add it in a filesystem\n")
         cv2.waitKey(0)
     else:
@@ -40,10 +40,10 @@ def blurry():
     if os.path.isfile('grumpy_cat_project.jpg'):
         print("File exist")
         # BLURRY GRUMPY CAT
-        blurry_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
+        image_blurry_grumpy_cat = cv2.imread('grumpy_cat_project.jpg')
         src = cv2.imread('grumpy_cat_project.jpg', cv2.IMREAD_UNCHANGED)
-        blurry_grumpy_cat = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
-        cv2.imwrite('filesystem_gray_picture/blurry_grumpy_cat.png',blurry_grumpy_cat)
+        image_blurry_grumpy_cat = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
+        cv2.imwrite('filesystem_gray_picture/blurry_grumpy_cat.png',image_blurry_grumpy_cat)
         print("Your image is now in blurry and you add it in a filesystem\n")
         cv2.waitKey(0)
     else:
