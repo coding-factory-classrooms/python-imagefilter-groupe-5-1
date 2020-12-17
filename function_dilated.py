@@ -15,7 +15,7 @@ def function_dilated():
         # DILATED CHESHIRE
         image_cheshire = cv2.imread('Cheshire.png')
         dilated_cheshire = cv2.dilate(image_cheshire, kernel, iterations=1)
-        cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_cheshire.png',dilated_cheshire)
+        cv2.imwrite('filesystem_gray_picture/dilated_cheshire.png',dilated_cheshire)
         print("Your image is now dilated and you add it in a file\n")
         cv2.waitKey(0)
     else:
@@ -31,7 +31,7 @@ def function_dilated():
         image_shiba = cv2.imread('chien.jpg')
         # DILATED
         dilated_dog = cv2.dilate(image_shiba, kernel, iterations=1)
-        cv2.imwrite('C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_dog.png',dilated_dog)
+        cv2.imwrite('filesystem_gray_picture/dilated_dog.png',dilated_dog)
         print("Your image is now dilated and you add it in a file\n")
     else:
         print("File doesn't exist")
@@ -45,7 +45,7 @@ def function_dilated():
         # DILATED GRUMPY CAT
         dilated_grumpy_cat = cv2.dilate(image_grumpy_cat, kernel, iterations=1)
         cv2.imwrite(
-            'C:/Users/33663/Documents/Projet-Python-Robin/Python/filesystem_gray_picture/dilated_grumpy_cat.png',dilated_grumpy_cat)
+            'filesystem_gray_picture/dilated_grumpy_cat.png',dilated_grumpy_cat)
         print("Your image is now dilated and you add it in a file\n")
     else:
         print("File doesn't exist")
