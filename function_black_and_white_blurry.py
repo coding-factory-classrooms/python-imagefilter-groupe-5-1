@@ -11,24 +11,31 @@ def function_black_and_white_blurry():
     """
     print("----------FOR CHESHIRE----------")
     if os.path.isfile('Cheshire.png'):
+        # The program start with a condition to see if the image exist in the file
         print("File exist")
         # BLACK AND WHITE CHESHIRE
         image_cheshire = cv2.imread('Cheshire.png')
+        # The image became a value where we put on the gray filter
         image_gray_cheshire = cv2.cvtColor(image_cheshire, cv2.COLOR_BGR2GRAY)
         cv2.imwrite('filesystem_gray_picture/Cheshire_gray.png', image_gray_cheshire)
         print("Your image is now in black and white and you add it in a filesystem\n")
         cv2.waitKey(0)
     else:
+        # Is she doesn't exist then she display a message
         print("File doesn't exist")
         if os.path.isfile('filesystem_gray_picture/Cheshire_gray.png'):
+             # The program start with a condition to see if the image with the gray filter exist exist in the file
             # BLURRY CHESHIRE
             image_blurry_cheshire = cv2.imread('filesystem_gray_picture/Cheshire_gray.png')
             src = cv2.imread('filesystem_gray_picture/Cheshire_gray.png', cv2.IMREAD_UNCHANGED)
             image_blurry_cheshire = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
+            # The program create a new picture with the other filter add on in order to make a picture with the gray and the blurry filters
             cv2.imwrite('filesystem_gray_picture/black_and_white_blurry_cheshire.png', image_blurry_cheshire)
+            # The program display a message to say that the picture is now in gray and blurry
             print("Your image is now in blurry and black and white\n")
             cv2.waitKey(0)
         else:
+            # Is she doesn't exist then she display a message
             print("File doesn't exist")
             
     print("----------FOR SHIBA----------")
