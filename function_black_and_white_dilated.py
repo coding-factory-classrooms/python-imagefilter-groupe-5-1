@@ -6,6 +6,12 @@ kernel = np.ones((5, 5), np.uint8)
 
 
 def function_black_and_white_dilated():
+    """
+    She check if the image exist.
+    The image became a value and we put the gray filter.
+    Then the program take the new image with the filter on and add the dilated filter.
+    Same for the 3 images.
+    """
     print("----------FOR CHESHIRE----------")
     if os.path.isfile('Cheshire.png'):
         print("File exist")
