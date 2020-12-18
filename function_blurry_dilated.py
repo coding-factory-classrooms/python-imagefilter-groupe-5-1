@@ -22,7 +22,7 @@ def function_blurry_dilated():
             src = cv2.imread('filesystem_gray_picture/dilated_cheshire.png', cv2.IMREAD_UNCHANGED)
             image_blurry_cheshire = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_cheshire.png', image_blurry_cheshire)
-            print("Your image is now in blurry and you add it in a filesystem\n")
+            print("Your image is now in blurry and dilated\n")
             cv2.waitKey(0)
         else:
             print("File doesn't exist")
@@ -43,7 +43,7 @@ def function_blurry_dilated():
             src = cv2.imread('filesystem_gray_picture/dilated_shiba.jpg', cv2.IMREAD_UNCHANGED)
             image_blurry_shiba = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_shiba.png', image_blurry_shiba)
-            print("Your image is now in blurry and you add it in a filesystem\n")
+            print("Your image is now in blurry and dilated\n")
             cv2.waitKey(0)
         else:
             print("File doesn't exist")
@@ -64,7 +64,7 @@ def function_blurry_dilated():
             src = cv2.imread('filesystem_gray_picture/dilated_grumpy_cat.jpg', cv2.IMREAD_UNCHANGED)
             image_blurry_shiba = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_grumpy_cat.png', image_blurry_grumpy_cat)
-            print("Your image is now in blurry and you add it in a filesystem\n")
+            print("Your image is now in blurry and dilated\n")
             cv2.waitKey(0)
         else:
             print("File doesn't exist")
