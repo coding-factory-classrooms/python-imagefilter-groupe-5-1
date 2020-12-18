@@ -8,7 +8,7 @@ def blurry():
     She applied a filter which makes the image blurry.
     She take the image and look if she exists. She became a value and put the blurry filter.
     Then She is rewrite in a new file with a new name.
-    She do that for the 3 images.
+    Same for the 3 images.
     """
 
     print("----------FOR CHESHIRE----------")
