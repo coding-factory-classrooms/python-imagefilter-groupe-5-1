@@ -24,7 +24,7 @@ def function_blurry_dilated():
         if os.path.isfile('filesystem_gray_picture/dilated_cheshire.png'):
             print("File exist")
             # BLURRY CHESHIRE
-            image_blurry_cheshire = cv2.imread('Cfilesystem_gray_picture/dilated_cheshire.png')
+            image_blurry_cheshire = cv2.imread('filesystem_gray_picture/dilated_cheshire.png')
             src = cv2.imread('filesystem_gray_picture/dilated_cheshire.png', cv2.IMREAD_UNCHANGED)
             image_blurry_cheshire = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_cheshire.png', image_blurry_cheshire)
@@ -45,7 +45,7 @@ def function_blurry_dilated():
         if os.path.isfile('filesystem_gray_picture/dilated_shiba.jpg'):
             print("File exist")
             # BLURRY SHIBA
-            image_blurry_shiba = cv2.imread('Cfilesystem_gray_picture/dilated_shiba.jpg')
+            image_blurry_shiba = cv2.imread('filesystem_gray_picture/dilated_shiba.jpg')
             src = cv2.imread('filesystem_gray_picture/dilated_shiba.jpg', cv2.IMREAD_UNCHANGED)
             image_blurry_shiba = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_shiba.png', image_blurry_shiba)
@@ -66,7 +66,7 @@ def function_blurry_dilated():
         if os.path.isfile('filesystem_gray_picture/dilated_grumpy_cat.jpg'):
             print("File exist")
             # BLURRY GRUMPY CAT
-            image_blurry_grumpy_cat = cv2.imread('Cfilesystem_gray_picture/dilated_grumpy_cat.jpg')
+            image_blurry_grumpy_cat = cv2.imread('filesystem_gray_picture/dilated_grumpy_cat.jpg')
             src = cv2.imread('filesystem_gray_picture/dilated_grumpy_cat.jpg', cv2.IMREAD_UNCHANGED)
             image_blurry_shiba = cv2.GaussianBlur(src, (5, 5), cv2.BORDER_DEFAULT)
             cv2.imwrite('filesystem_gray_picture/blurry_dilated_grumpy_cat.png', image_blurry_grumpy_cat)
