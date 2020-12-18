@@ -3,6 +3,12 @@ import os.path
 
 
 def function_black_and_white_blurry():
+    """
+    She look if the image exist.
+    The image became a value and we put the gray filter.
+    Then the program take the new image with the filter on and add the blurry filter.
+    She do that for the 3 images.
+    """
     print("----------FOR CHESHIRE----------")
     if os.path.isfile('Cheshire.png'):
         print("File exist")
