@@ -34,6 +34,7 @@ for arg in args:
     elif arg =='-black_and_white_blurry':
         print("FUNCTION BLURRY AND BLACK AND WHITE\n")
         function_black_and_white_blurry()
+        print("Your image is now in black and white and blurry")
     elif arg =='-function_black_and_white_dilated':
         print("FUNCTION DILATED AND BLACK AND WHITE")
         function_black_and_white_dilated()
