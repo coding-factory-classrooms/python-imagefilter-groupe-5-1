@@ -6,6 +6,13 @@ kernel = np.ones((5, 5), np.uint8)
 
 
 def function_all():
+    """
+    She applied all the filters on the pictures.
+    She looks if they exists and put on a first filter.
+    Then she take the new picture with the filter on and add a new filter.
+    She take the new picture with the two filters and add the last one
+    Same for the 3 images.
+    """
     print("----------FOR CHESHIRE----------")
     if os.path.isfile('Cheshire.png'):
         print("File exist")
